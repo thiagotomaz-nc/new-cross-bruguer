@@ -19,23 +19,13 @@ private:
 
 public:
 
-    order();
+    Order();
     void addItem();
     void removeItem();
     void sumPriceTotal();
     void updatePriceTotal(double piceitem, int typeOperationAddSubtract);
     double getPriceTotal();
-
+    ~Order();
 };
-
-order::order(/* args */)
-{
-}
-
-order::~order()
-{
-}
-
-
 
 #endif

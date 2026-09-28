@@ -3,7 +3,7 @@
 
 #include "Order.hpp"
 
-#define LENGTH_DEFAULT 10
+#define SIZE_DEFAULT 10
 
 class PreparationQueue
 {
@@ -14,18 +14,17 @@ private:
     PreparationQueue* next;
 
 public:
-    PreparationQueue(int size=LENGTH_DEFAULT);
+    PreparationQueue(int size=SIZE_DEFAULT);
+    void enqueue(Order order); // ponteiro ou não
+    void dequeue();
+    int isEmpty();
+    Order peek();
+    void setSize(int newSize);
+    int getSize();
+    int getLength();
+    int setLength(int newLength);
 
-    ~preparationQueue();
+    ~PreparationQueue();
 };
-
-preparationQueue::preparationQueue(/* args */)
-{
-}
-
-preparationQueue::~preparationQueue()
-{
-}
-
 
 #endif
