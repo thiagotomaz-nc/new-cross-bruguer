@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class order
+class Order
 {
 private:
     int number;
@@ -25,10 +25,6 @@ public:
     void sumPriceTotal();
     void updatePriceTotal(double piceitem, int typeOperationAddSubtract);
     double getPriceTotal();
-
-
-
-
 
 };
 
