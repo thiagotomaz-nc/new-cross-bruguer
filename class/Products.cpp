@@ -1,4 +1,4 @@
-#include "products.hpp"
+#include "Products.hpp"
 
 int Products::getBarCode(){
     return this->barCode;
