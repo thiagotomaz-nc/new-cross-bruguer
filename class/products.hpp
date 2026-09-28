@@ -20,26 +20,6 @@ class Products{
 
         float getUnitPrice();
         float setUnitPrice();
-
-
-
-
-
-
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
