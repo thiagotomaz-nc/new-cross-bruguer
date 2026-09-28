@@ -8,19 +8,28 @@ using namespace std;
 class order
 {
 private:
-  int number;
-  int numberTable;
-  string nomeCliente;
- // Itens itens[];
- double priceTotal = 0;
- int statusOrder;
+    int number;
+    int numberTable;
+    string nomeCliente;
+    // Itens itens[];
+    double priceTotal = 0;
+    int statusOrder;
  
 
 
 public:
-    order(/* args */);
 
-    ~order();
+    order();
+    void addItem();
+    void removeItem();
+    void sumPriceTotal();
+    void updatePriceTotal(double piceitem, int typeOperationAddSubtract);
+    double getPriceTotal();
+
+
+
+
+
 };
 
 order::order(/* args */)
