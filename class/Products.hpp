@@ -1,6 +1,7 @@
 #ifndef _PRODUCTS_HPP_
 #define _PRODUCTS_HPP_
 
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -12,14 +13,15 @@ class Products{
         float unitPrice;
 
     public:
+        Products();
+        
         int getBarCode();
-        int setBarCode();
-
         string getDescription();
-        string setDescription();
-
         float getUnitPrice();
-        float setUnitPrice();
+        
+        void setDescription(string newDescription);
+        void setBarCode(int newBarCode);
+        void setUnitPrice(float newUnitPrice);
 };
 
 #endif

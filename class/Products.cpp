@@ -1,25 +1,31 @@
 #include "Products.hpp"
 
+Products::Products(){
+    this->barCode = 0;
+    this->description = "";
+    this->unitPrice = 0.0;
+}
+
 int Products::getBarCode(){
     return this->barCode;
 }
 
-int Products::setBarCode(){
-
+void Products::setBarCode(int newBarCode){
+    this->barCode = newBarCode;
 }
 
 string Products::getDescription(){
     return this->description;
 }
 
-string Products::setDescription(){
-
+void Products::setDescription(string newDescription){
+    this->description = newDescription;
 }
 
 float Products::getUnitPrice(){
     return this->unitPrice;
 }
 
-float Products::setUnitPrice(){
-
+void Products::setUnitPrice(float newUnitPrice){
+    this->unitPrice = newUnitPrice;
 }

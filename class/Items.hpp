@@ -9,16 +9,21 @@ using namespace std;
 class Items{
 
     private:
-        Products products;
+        Products* product;      // Ponteiro para o produto cadastrado no menu
         int quantity;
         float priceTotalItems;
 
     public:
+        Items();
+
         void sumPriceTotal();
         float getPriceTotal();
 
         int getQuantity();
-        int setQuantity();
+        void setQuantity(int newQuantity);
+
+        Products* getProduct();
+        void setProduct(Products* newProduct);
 };
 
 #endif
