@@ -34,13 +34,4 @@ public:
     ~OrderHistory();
 };
 
-OrderHistory::OrderHistory(/* args */)
-{
-}
-
-OrderHistory::~OrderHistory()
-{
-}
-
-
 #endif
