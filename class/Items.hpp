@@ -1,7 +1,7 @@
 #ifndef _ITEMS_HPP_
 #define _ITEMS_HPP_
 
-#include "Products.hpp"
+#include "Product.hpp"
 
 #include <iostream>
 using namespace std;
@@ -9,12 +9,12 @@ using namespace std;
 class Items{
 
     private:
-        Products* product;      // Ponteiro para o produto cadastrado no menu
+        Product* product;      // Ponteiro para o produto cadastrado no menu
         int quantity;
         float priceTotalItems;
 
     public:
-        Items();
+        Items(Product* product, int quantity,float priceTotalItems);
 
         void sumPriceTotal();
         float getPriceTotal();
@@ -22,8 +22,8 @@ class Items{
         int getQuantity();
         void setQuantity(int newQuantity);
 
-        Products* getProduct();
-        void setProduct(Products* newProduct);
+        Product* getProduct();
+        void setProduct(Product* newProduct);
 };
 
 #endif

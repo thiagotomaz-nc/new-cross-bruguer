@@ -1,9 +1,9 @@
 #include "Items.hpp"
 
-Items::Items() {
-    this->product = nullptr;
-    this->quantity = 0;
-    this->priceTotalItems = 0.0;
+Items::Items(Product* product, int quantity,float priceTotalItems) {
+    this->product = product;
+    this->quantity = quantity;
+    this->priceTotalItems = priceTotalItems;
 }
 
 void Items::sumPriceTotal() {
@@ -27,11 +27,11 @@ void Items::setQuantity(int newQuantity) {
     this->sumPriceTotal();    // Recalcula o total ao alterar a quantidade
 }
 
-Products* Items::getProduct() {
+Product* Items::getProduct() {
     return this->product;
 }
 
-void Items::setProduct(Products* newProduct) {
+void Items::setProduct(Product* newProduct) {
     this->product = newProduct;
     this->sumPriceTotal();    // Recalcula o total ao alterar o produto
 }
