@@ -69,3 +69,7 @@ vcpkg_installed/
 Testing/
 .cache/
 .vscode/
+
+#arquivos 
+main
+main.exe
