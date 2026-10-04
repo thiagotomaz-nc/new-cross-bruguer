@@ -11,22 +11,25 @@ class Product{
         int barCode;
         string description;
         double unitPrice;
+        Product * nextProduct;
 
     public:
-        Product(int barCode, string description, double unitPrice);
+        Product(int barCode, string description, double unitPrice, Product * nextProduct);
         Product();
 
         int getBarCode();
         string getDescription();
         float getUnitPrice();
+        Product* getNext();
         
         void setDescription(string newDescription);
         void setBarCode(int newBarCode);
         void setUnitPrice(double newUnitPrice);
+        void setNext(Product * product);    
 
-        void print();
-        //~Product();
 
+        void show();
+        
 };
 
 #endif

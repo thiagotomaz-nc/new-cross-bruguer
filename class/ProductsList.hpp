@@ -4,32 +4,40 @@
 #include <string>
 #include <iostream>
 #include "Product.hpp"
+#include <cctype>
 
 using namespace std;
 
-#define SIZE_DEFAULT 15
-
-//lista simples, sem ser encadeada;
+//lista simplesmente encadeada;
+// responsabilidade: Gerenciar os produtos que serão exibidos no menu;
 class ProductsList{
 
     private:
-        Product * product;
-        int size;
-        int length;
-        
+        Product * headProduct = nullptr; // marca qual o inicio do cabeça dos produtos;
+        int n_elements;       
         
     public:
-        ProductsList(Product *product, int size = SIZE_DEFAULT);
-        ProductsList( int size = SIZE_DEFAULT);
-        void addProduct();
-        void removeProduct();
-        int getSize();
-        void setSize(int newSize);
-        int getLength();
+        ProductsList();
+        
+        void addProduto(Product* newProduct);
+        void updateProduct(Product* updateproduto, string newDescription, double newPrice);
+        void removeProduct(int barCode);
+
+        bool constainsBarCode(int codigoProduto);
+        Product* searchProduct(int codigoProduto);
+        void searchProductsName(string partName);
+        void setNElements(int newNElements);
+        int getNElements();
+        string toLowerText(string text);
+
+        Product* getHeadProduct();
+        void setHeadProduct(Product* nextHeadProduct);
+
+        bool isEmpty();
         void setLength(int newLength);
-        void setNext(ProductsList * next);
-        ProductsList*  getNext();
-        void showProducts();
+
+        void showProducts(Product * head); // sber onde inicir a lista encadeda;
+
         ~ProductsList();
 };
 
